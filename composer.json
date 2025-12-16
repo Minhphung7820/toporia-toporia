@@ -1,0 +1,77 @@
+{
+    "name": "toporia/toporia",
+    "description": "Toporia - A modern PHP application skeleton built with Clean Architecture",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Phungtruong7820",
+            "email": "minhphung485@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "toporia/framework": "^1.0",
+        "phpmailer/phpmailer": "^7.0",
+        "phpoffice/phpspreadsheet": "^5.2",
+        "openspout/openspout": "^4.28"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0",
+        "mockery/mockery": "^1.6",
+        "fakerphp/faker": "^1.24"
+    },
+    "suggest": {
+        "toporia/mongodb": "MongoDB ODM support",
+        "toporia/socialite": "OAuth authentication (Google, Facebook, GitHub, etc.)",
+        "toporia/webhook": "Webhook handling and verification",
+        "toporia/dominion": "Role and permission management",
+        "toporia/audit": "Audit logging for models",
+        "toporia/tenancy": "Multi-tenancy support",
+        "toporia/api-versioning": "API versioning support",
+        "aws/aws-sdk-php": "AWS services integration",
+        "php-amqplib/php-amqplib": "RabbitMQ queue driver",
+        "elasticsearch/elasticsearch": "Elasticsearch search driver",
+        "ext-redis": "Redis cache/queue/realtime support",
+        "ext-rdkafka": "High-performance Kafka broker",
+        "ext-pdo_mysql": "MySQL database support",
+        "ext-pdo_pgsql": "PostgreSQL database support",
+        "ext-mongodb": "MongoDB support",
+        "ext-pcntl": "Multi-process execution (Linux/macOS)",
+        "ext-zip": "Excel import/export"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "@php -r \"file_put_contents('.env', file_get_contents('.env.example'));\"",
+            "@php console key:generate"
+        ],
+        "test": "vendor/bin/phpunit",
+        "test:unit": "vendor/bin/phpunit --testsuite Unit",
+        "test:feature": "vendor/bin/phpunit --testsuite Feature",
+        "test:integration": "vendor/bin/phpunit --testsuite Integration",
+        "test:performance": "vendor/bin/phpunit --testsuite Performance",
+        "test:coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

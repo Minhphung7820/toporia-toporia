@@ -1,0 +1,173 @@
+# ==========================================
+# Composer Dependencies
+# ==========================================
+/vendor/
+composer.lock
+
+# ==========================================
+# Environment & Configuration
+# ==========================================
+.env
+.env.*
+!.env.example
+.env.local
+.env.*.local
+
+# ==========================================
+# Storage & Runtime Files
+# ==========================================
+# Storage directories
+/storage/app/*
+!/storage/app/.gitkeep
+!/storage/app/public/
+!/storage/app/public/.gitkeep
+
+/storage/cache/*
+!/storage/cache/.gitkeep
+
+/storage/logs/*
+!/storage/logs/.gitkeep
+
+/storage/sessions/*
+!/storage/sessions/.gitkeep
+
+/storage/temp/*
+!/storage/temp/.gitkeep
+
+# Queue & Process files
+/storage/queue-worker.pid
+*.pid
+
+# Bootstrap cache (if framework generates it)
+/bootstrap/cache/*
+!/bootstrap/cache/.gitkeep
+
+# ==========================================
+# Node.js & Frontend
+# ==========================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+
+# ==========================================
+# Build Artifacts
+# ==========================================
+/build/
+/dist/
+/public/build/
+!/public/build/.gitkeep
+/public/hot
+/public/storage
+!/public/storage/.gitkeep
+
+# Vite
+.vite/
+
+# ==========================================
+# Testing
+# ==========================================
+# PHPUnit cache and results
+.phpunit.cache/
+.phpunit.result.cache
+*.phpunit.result.cache
+test-results
+
+# Coverage reports
+/coverage/
+/clover.xml
+
+# Test logs
+/tests/*.log
+
+# DocBlock generation scripts (temporary)
+/add-docblock*.php
+/docblock-*.log
+/DOCBLOCK_SUMMARY.md
+
+# ==========================================
+# IDE & Editor Files
+# ==========================================
+.idea/
+.vscode/
+.cursor/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# ==========================================
+# OS Files
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ==========================================
+# Temporary & Backup Files
+# ==========================================
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+*.save
+*.swp
+*.swo
+
+# ==========================================
+# Docker
+# ==========================================
+# Docker volumes (if using local volumes)
+/docker-data/
+
+# ==========================================
+# Logs (all locations)
+# ==========================================
+*.log
+logs/
+*.log.*
+
+# ==========================================
+# Deployment & CI/CD
+# ==========================================
+# deployment/ - Removed (was not used)
+.vercel/
+.netlify/
+
+# ==========================================
+# Framework Specific
+# ==========================================
+# Config symlinks (actual files are in configs/)
+/.npmrc
+/.nvmrc
+/.dockerignore
+
+# Claude Code AI (optional - can be committed if needed)
+CLAUDE.md
+
+# ==========================================
+# Framework & Optional Packages (separate repos)
+# ==========================================
+packages/
+
+# ==========================================
+# Documentation & Examples
+# ==========================================
+# examples/ - Removed (was not used)
+# Uncomment if you want to ignore docs
+#docs/*.log
